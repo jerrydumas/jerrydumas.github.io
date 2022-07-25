@@ -1,0 +1,155 @@
+.contact {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.contactContent,
+.aboutContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about {
+    display: grid;
+    grid-template-rows: 10vh 50vh;
+}
+
+.secHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secHeading h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    font-family: var(--charmonman);
+}
+
+.article1,
+.article2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article1 img {
+    width: 80%;
+    border-radius: 2rem;
+}
+
+.article2 p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+
+/* Form */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form {
+    width: 35vw;
+}
+
+.form-control {
+    margin-bottom: 1.2rem;
+    padding-bottom: .5rem;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input,
+.form-control textarea {
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input,
+.form-control.success textarea {
+    border-color: darkgreen;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    border-color: darkred;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+    color: darkgreen;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: darkred;
+    visibility: visible;
+}
+
+.form-control small {
+    color: darkred;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .contact,
+    .contactContent,
+    .aboutContent {
+        display: flex;
+        flex-direction: column;
+    }
+    .article1 img {
+        width: 45%;
+        border-radius: 2rem;
+    }
+    .article2 p {
+        line-height: 1.8;
+        margin: 2rem;
+        text-align: center;
+    }
+}

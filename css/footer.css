@@ -1,0 +1,16 @@
+.footer {
+    height: 10vh;
+    width: 100vw;
+    background: var(--blk);
+}
+
+.footerContent {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.footerContent small {
+    color: var(--wht);
+    text-align: center;
+}
