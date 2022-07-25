@@ -197,7 +197,7 @@ body {
 /* HERO */
 
 .hero {
-    background: url('img/apple.png');
+    background: url('./img/apple.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
