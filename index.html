@@ -5,9 +5,9 @@
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web Developer Designer NYC" />
+    <meta name="description" content="Web Developer Designer" />
     <title>Web Developer | Jerry Dumas</title>
-    <link rel="stylesheet" href="css/glstyles.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/cdca4def56.js" crossorigin="anonymous"></script>
     <script src="js/data.js"></script>
 </head>
@@ -52,21 +52,21 @@
                 <script>
                     const pItems = CardItems.map((item) => {
                         return `
-                <div class='vcard'>
-                <img src=${item.img} alt=${item.desc} class='vimg ${item.class}' />
-                <div class='vcardContent'>
-                    <h2>
-                    ${item.title}
-                    </h2>
-                    <p>${item.about}</p>
-                    <ul>
-                    <li>
-                    <a href=${item.link}> Go To Site</a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-`
+                        <div class='vcard'>
+                        <img src=${item.img} alt=${item.desc} class='vimg ${item.class}' />
+                        <div class='vcardContent'>
+                            <h2>
+                            ${item.title}
+                            </h2>
+                            <p>${item.about}</p>
+                            <ul>
+                            <li>
+                            <a href=${item.link}> Go To Site</a>
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+        `
                     }).join('')
                     const result = document.querySelector('.pcards')
                     result.innerHTML = pItems;
@@ -124,59 +124,58 @@
                     </div>
                 </div>
                 <div class="form">
-                        <form id="form">
-                            <div class="form-control">
-                                <label for="firstName">First Name</label><small>Error message</small>
-                                <input type="text" placeholder="First Name" id="firstName" name="firstName" />
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                            </div>
-                            <div class="form-control">
-                                <label for="lastName">Last Name</label><small>Error message</small>
-                                <input type="text" placeholder="Last Name" id="lastName" name="lastName" />
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
+                    <h2>Thank You For Your Interest</h2>
+                    <form id="form" action="index.php#contact" method="POST">
+                        <div class="form-control">
+                            <label for="firstName">First Name</label><small>Error message</small>
+                            <input type="text" placeholder="First Name" id="firstName" name="firstName" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="form-control">
+                            <label for="lastName">Last Name</label><small>Error message</small>
+                            <input type="text" placeholder="Last Name" id="lastName" name="lastName" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
 
-                            </div>
-                            <div class="form-control">
-                                <label for="username">Email</label><small>Error message</small>
-                                <input type="email" placeholder="Email" id="email" />
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="form-control">
+                            <label for="username">Email</label><small>Error message</small>
+                            <input type="email" placeholder="Email" id="email" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
 
-                            </div>
-                            <div class="form-control">
-                                <label for="message">Reason For Visit</label>
-                                <textarea type="text" placeholder="" id="message" name="message"></textarea>
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
+                        </div>
+                        <div class="form-control">
+                            <label for="message">Reason For Visit</label>
+                            <textarea type="text" placeholder="" id="message" name="message"></textarea>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
 
-                            <button type="submit" name="submit">Submit</button>
-                        </form>
+                        <button type="submit" name="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </section>
-        <section class="contact" id="contact">
-            <div class="heading">
-                <h2>Contact Me</h2>
+        <footer class='footer'>
+            <div class="footerContent">
+                <small>&reg; 2022 Jerry Dumas | Web Developer</small>
             </div>
-            <div class="contactContent">
-                <div class="about">
-                    <div class="secHeading">
-                        <h2>About Me</h2>
-                    </div>
-                    <div class="aboutContent">
-                        <article class="article1">
-                            <img src='./img/myavatar.png' alt="my avatar" />
-                        </article>
-                        <article class="article2">
-                            <p>I am a Web Designer and Developer who likes to learn about my craft and likes to pass along what I learn to help others.</p>
-                        </article>
-                    </div>
-                </div>
-                <div class="form">
-                </div>
-            </div>
-        </section>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            header: '[data-scroll-header]'
+        });
+    </script>
+    <script src="js/openNav.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>
