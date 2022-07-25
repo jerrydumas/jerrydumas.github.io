@@ -197,7 +197,7 @@ body {
 /* HERO */
 
 .hero {
-    background: url('img/apple.png');
+    background: url('./img/apple.png');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -328,7 +328,10 @@ body {
         bottom: 5.5rem;
     }
 }
+
+
 /* PORTFOLIO */
+
 .portfolio {
     display: grid;
     grid-auto-flow: row;
@@ -476,7 +479,10 @@ body {
         width: 375px;
     }
 }
+
+
 /* BLOG */
+
 .blog {
     display: grid;
     grid-auto-flow: row;
@@ -592,7 +598,10 @@ body {
         flex-wrap: wrap;
     }
 }
+
+
 /* CONTACT */
+
 .contact {
     display: grid;
     grid-auto-rows: auto;
@@ -748,7 +757,10 @@ body {
         text-align: center;
     }
 }
+
+
 /* FOOTER */
+
 .footer {
     height: 10vh;
     width: 100vw;
@@ -762,6 +774,11 @@ body {
 }
 
 .footerContent small {
+    color: var(--wht);
+    text-align: center;
+}
+
+footerContent small {
     color: var(--wht);
     text-align: center;
 }
